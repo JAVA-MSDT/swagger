@@ -1,8 +1,0 @@
-swagger2:
-  api:
-    title: "Default Swagger API"
-    description: "API documentation Service"
-    version: "1.0"
-  base-package: "com.javamsdt"
-  ui:
-    enabled: true

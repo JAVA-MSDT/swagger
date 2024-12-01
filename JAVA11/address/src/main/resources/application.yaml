@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: "Address"
+swagger2:
+  api:
+    title: "Address Title"
+    description: "Address API Service"
+    version: "1.0.0"
+    contact-name: "Ahmed Samy"
+    contact-email: "serenitydiver@hotmail.com"
+    contact-url: "https://www.linkedin.com/in/java-msdt/"
+    license: "MSDT License"
+    license-url: "https://github.com/JAVA-MSDT/swagger"
+  base-package: "com.mycompany"
+
+
+

@@ -1,0 +1,50 @@
+swagger2:
+  api:
+    title: "Default API Title"               # The title of the API displayed in Swagger UI
+    description: "API documentation Service"  # A short description of the API
+    version: "1.0"                         # The version of the API
+    terms-of-service-url: "http://example.com/terms"  # The URL for the terms of service
+    contact-name: "Ahmed Samy"               # Contact name for the API documentation
+    contact-email: "serenitydiver@hotmail.com"  # Contact email for the API documentation
+    contact-url: "https://www.linkedin.com/in/java-msdt/"      # Contact URL for the API documentation
+    license: "MIT"                         # License for the API
+    license-url: "https://github.com/JAVA-MSDT/swagger"          # URL to the license information
+
+  base-package: "com.javamsdt"              # The base package to scan for REST controllers (default: com.example)
+
+  ui:
+    enabled: true                          # Enable Swagger UI (true/false)
+    default-model-rendering: "example"     # Default rendering style for models ("example", "model")
+    deep-linking: true                     # Enable deep linking for URLs (true/false)
+    display-operation-id: false            # Display operation IDs in Swagger UI (true/false)
+    default-model-expand-depth: 1          # The default expansion depth for models
+    default-operations-expand-depth: 1     # The default expansion depth for operations
+    display-request-duration: true         # Display the duration of API requests
+    doc-expansion: "list"                  # "none" (collapse), "list" (expand), or "full"
+    filter: true                           # Enable filtering of API operations in UI
+    max-url-length: 2000                   # Max URL length before truncation
+    show-extensions: true                  # Display vendor extensions in Swagger UI
+    try-it-out-enabled: true               # Allow users to "Try it out" in Swagger UI
+    validator-url: "http://validator.swagger.io"  # URL for Swagger validator (use null to disable)
+
+  include-paths: "/api/**"                 # Include paths for Swagger documentation (optional)
+  exclude-paths: "/api/private/**"         # Exclude paths from Swagger documentation (optional)
+
+  servers:                                 # List of servers for the API
+    - url: "http://localhost:8080"         # Base URL for the API
+      description: "Local Development Server"
+
+  tags:                                    # Custom tags for grouping API operations
+    - name: "User Management"              # Tag name
+      description: "Operations related to user management"
+    - name: "Order Management"             # Another tag for a specific group of APIs
+      description: "Operations related to order management"
+
+  security:
+    schemes:
+      - type: "apiKey"                     # Security scheme type ("apiKey", "http", "oauth2", etc.)
+        name: "Authorization"              # Header name for the security scheme
+        in: "header"                       # Location of the security scheme ("header", "query", "cookie")
+      - type: "http"
+        scheme: "bearer"
+        bearer-format: "JWT"
